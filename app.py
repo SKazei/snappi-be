@@ -1,3 +1,4 @@
+import os
 from flask import Flask, redirect, request, send_from_directory
 
 app = Flask(__name__)
@@ -10,6 +11,13 @@ SEARCH_ENGINES = {
     'duckduckgo': 'https://duckduckgo.com/?q={query}',
     'startpage': 'https://www.startpage.com/do/search?query={query}'
 }
+
+@app.route('/googlef416689ddc8de593.html')
+def google_verification():
+    return send_from_directory(
+        directory=os.path.abspath(os.path.dirname(__file__)),
+        filename='googlef416689ddc8de593.html'
+    )
 
 @app.route('/search/', methods=['GET'])
 def search_endpoint():
