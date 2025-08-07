@@ -16,7 +16,7 @@ SEARCH_ENGINES = {
 def google_verification():
     return send_from_directory(
         directory=os.path.abspath(os.path.dirname(__file__)),
-        filename='googlef416689ddc8de593.html'
+        path='googlef416689ddc8de593.html'
     )
 
 @app.route('/search/', methods=['GET'])
